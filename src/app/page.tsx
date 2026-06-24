@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getOrganization } from "@/lib/assoconnect";
 import { createClient } from "@/lib/supabase/server";
 
@@ -77,6 +78,13 @@ export default async function Home() {
           )}
         </div>
       </div>
+
+      <Link
+        href="/prenoms"
+        className="mt-4 bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors"
+      >
+        👶 Trouver un prénom
+      </Link>
     </main>
   );
 }
